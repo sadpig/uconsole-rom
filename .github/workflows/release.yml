@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 打包定制套件（脚本 + 清单，不含 img 镜像）
+        run: |
+          tar czf uconsole-rom-kit.tar.gz \
+            --exclude='.git' --exclude='.github' \
+            README.md LICENSE customize.sh packages.d tools
+          sha256sum uconsole-rom-kit.tar.gz > uconsole-rom-kit.tar.gz.sha256
+
+      - name: 创建 Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            uconsole-rom-kit.tar.gz
+            uconsole-rom-kit.tar.gz.sha256
+          body: |
+            ## uconsole-rom ${GITHUB_REF_NAME}
+
+            - `uconsole-rom-kit.tar.gz`：定制套件（在 uConsole 上解压后跑 `sudo ./customize.sh`）
+            - 完整 `.img.xz` 镜像体积太大走不了 CI，构建后手动传到本 Release
+
+            构建方法见 README。
+          generate_release_notes: true

@@ -1,0 +1,16 @@
+# 60-games.list —— 复古游戏 / fantasy console
+
+retroarch
+libretro-fceumm      # NES/红白机
+libretro-snes9x      # 超任
+libretro-gambatte    # GB/GBC
+libretro-mgba        # GBA
+libretro-picodrive   # 世嘉 MD
+mednafen             # 多机种（含 PSX），命令行友好
+dosbox-staging|dosbox
+nethack-console      # 地铁经典
+
+# ---- 手动安装（见 README 第三方清单）----
+# TIC-80   —— 开源 fantasy console，GitHub 有 ARM 构建
+# PICO-8   —— 付费，lexaloffle 官网下载 ARM 版
+# RetroPie —— 用它的 setup 脚本装（与 apt 的 retroarch 共存需规划）

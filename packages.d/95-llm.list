@@ -1,0 +1,9 @@
+# 95-llm.list —— 本地 LLM 尝鲜
+# apt 侧几乎没啥可装的，主力是 ollama / llama.cpp（脚本里装）
+
+# 依赖
+curl
+python3-venv
+
+# 提示：CM4(4GB) 建议 tinyllama / phi 级别 1-3B 量化模型；
+# CM5(8/16GB) 可以摸到 7-8B Q4。模型文件大，装在 SD 卡上会占几个 GB。

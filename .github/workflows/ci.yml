@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ShellCheck 主脚本
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq shellcheck
+          shellcheck -S warning customize.sh tools/*.sh
+
+      - name: 校验包清单格式
+        run: bash tools/check-lists.sh
+
+      - name: 验证 customize.sh 语法
+        run: bash -n customize.sh

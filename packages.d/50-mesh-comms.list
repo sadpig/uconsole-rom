@@ -1,0 +1,12 @@
+# 50-mesh-comms.list —— Meshtastic / LoRa 离网通信
+# 硬件前提：AIO 扩展板上的 SX1262 模块（SPI 接口）
+
+# Python CLI（pip 安装，见 customize.sh 里的第三方步骤）
+# meshtastic 本体 meshtasticd 也由脚本单独装 .deb
+
+# 先用 apt 把依赖垫上
+python3-serial
+python3-protobuf
+
+# 蓝牙（手机 App 通过 BLE 连接 meshtasticd 时用）
+bluez

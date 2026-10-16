@@ -1,0 +1,19 @@
+# 90-music.list —— 音乐制作 / 音频
+
+# tracker 音乐（uConsole 社区最受欢迎的音乐玩法）
+milkytracker
+
+# 录音/剪辑（论坛实测外接 USB 麦录 Audacity 很稳）
+audacity
+
+# 低延迟音频栈（论坛玩家强烈推荐 pipewire 路线）
+pipewire
+pipewire-pulse|pulseaudio
+wireplumber
+qjackctl
+pavucontrol
+
+# ---- 体积大/需手动，按需 ----
+# ardour          # 完整 DAW，小屏上偏挤
+# lmms            # 另一个 DAW
+# SunVox / Renoise / REAPER / M8 headless：见 README 第三方清单

@@ -1,0 +1,49 @@
+# 10-base.list —— 系统基础（所有分类的公共底座）
+# 每行一个包；"a|b" 表示优先装 a，装不上就装 b；# 开头为注释
+
+vim
+less
+man-db
+bash-completion
+curl
+wget
+ca-certificates
+gnupg
+unzip
+xz-utils
+p7zip-full
+file
+tree
+locales
+tzdata
+
+# 中文显示与输入（小屏上看中文日志/文档不抓瞎）
+fonts-noto-cjk
+fonts-wqy-zenhei
+
+# 硬件工具
+usbutils
+pciutils
+i2c-tools
+spi-tools
+lm-sensors
+dosfstools
+exfatprogs
+ntfs-3g
+udisks2
+
+# 内存救星：CM4/CM5 上强烈建议的 zram 压缩内存
+zram-config
+
+# 联网底座：4G 模块（官方 LTE 扩展板）靠这几个
+network-manager
+modemmanager
+libqmi-utils
+libmbim-utils
+
+# GPS 底座（AIO 扩展板 / USB GPS 都用得上）
+gpsd
+gpsd-clients
+
+# 无 RTC 的 uConsole 断电丢时间，chrony 联网后对时更稳
+chrony

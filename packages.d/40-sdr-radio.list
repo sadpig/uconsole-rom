@@ -1,0 +1,29 @@
+# 40-sdr-radio.list —— SDR / 无线电（RTL-SDR、ADS-B、卫星、APRS）
+# 硬件前提：HackerGadgets AIO 扩展板，或外接 RTL-SDR USB dongle
+
+rtl-sdr
+librtlsdr-dev
+gqrx-sdr
+soapysdr-tools
+multimon-ng
+inspectrum
+
+# ADS-B 飞机追踪（配 tar1090 网页地图更好用，见 README）
+dump1090-fa|dump1090-mutability
+
+# 433MHz 传感器 / 水电表抄读
+rtl_433
+
+# APRS 业余无线电数据包（声卡当调制解调器）
+direwolf
+
+# 卫星过境预测（社区里配 SDR++ 录卫星的经典组合）
+gpredict
+
+# ---- 体积大，按需取消注释 ----
+# gnuradio          # ~500MB，图形化 SDR 流程图
+# sdrangel          # 大而全的 SDR 套件
+# fldigi            # 业余无线电数字模式
+# qsstv             # 慢扫描电视图像
+
+# SDR++（社区录制卫星的主力）不在 Ubuntu 源里，由 customize.sh 单独安装

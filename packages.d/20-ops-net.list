@@ -1,0 +1,52 @@
+# 20-ops-net.list —— 现场运维 / 网络工具（SSH 终端、串口、网络诊断）
+
+openssh-server
+openssh-client
+tmux
+mosh
+screen
+
+# 串口调试（交换机/路由器/嵌入式设备 console 线）
+minicom
+tio|picocom
+
+# 网络诊断
+dnsutils
+tcpdump
+iperf3
+mtr|mtr-tiny
+traceroute
+netcat-openbsd
+socat
+nload
+iftop
+nethogs
+ethtool
+iproute2
+net-tools
+
+# WiFi 信号扫描（机身天线差，这个用来看信号质量）
+wavemon
+
+# VPN / 组网
+wireguard
+openvpn
+
+# 远程桌面客户端（RDP/VNC 连回主力机）
+remmina
+remmina-plugin-rdp
+freerdp3-x11|freerdp2-x11
+
+# 系统监控 / 文件管理
+htop
+btop|htop
+ncdu
+duf|df
+rsync
+rclone
+
+# 文本处理三件套
+jq
+ripgrep
+fzf
+bat

@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# 镜像产物（不进仓库，走 Releases）
+*.img
+*.img.xz
+*.img.gz
+*.zip
+*.deb
+
+# 构建临时目录
+build/
+work/

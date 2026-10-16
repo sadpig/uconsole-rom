@@ -1,0 +1,14 @@
+# 80-writing-knowledge.list —— 离线知识库 / 专注写作
+
+# 离线维基百科（ZIM 文件另下，见 README）
+kiwix-tools|kiwix
+
+# 专注写作（writerdeck 玩法）
+focuswriter
+wordgrinder
+
+# 文档处理
+pandoc
+
+# 笔记/知识管理（命令行流）
+# nb            # 终端笔记，Ubuntu 源较旧，可手动装最新版
