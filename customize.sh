@@ -11,7 +11,7 @@
 # 分类名 = packages.d/ 文件名中间那段：base ops pentest sdr mesh games dev writing music llm
 #
 set -uo pipefail
-cd "$(dirname "$(readlink -f "$0")")"
+cd "$(dirname "$(readlink -f "$0")")" || exit 1
 
 # ---------- 参数解析 ----------
 ONLY=""
@@ -100,8 +100,6 @@ if [[ $WITH_DESKTOP -eq 1 ]]; then
 fi
 
 # ---------- 第三方应用（apt 里没有的）----------
-SUDO_USER_HOME=$(eval echo "~${SUDO_USER:-root}")
-
 want() {  # 第三方也走 --only/--skip 逻辑
   [[ -z "$ONLY" || " $ONLY " == *" $1 "* ]] && [[ " $SKIP " != *" $1 "* ]]
 }

@@ -2,7 +2,7 @@
 # check-lists.sh —— 校验 packages.d/*.list 的格式
 # 规则：非注释行每行一个包；"a|b" 备选写法；包名只允许小写字母/数字/+/-/./~
 set -uo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit 1
 
 fail=0
 for f in packages.d/*.list; do
